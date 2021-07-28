@@ -80,12 +80,33 @@
         </button>
       </div>
       <div class="modal-body" id="comfirmBody">
-          <!-- <div id="comfirmBody"></div> -->
           <div id="for_delete" hidden=""></div>
       </div>
       <div class="modal-footer">
         <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
         <button type="button" id="comfirm" class="btn btn-primary" >Ок</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Comfirm Modal 1 -->
+<div class="modal fade" id="comfirmModal1" tabindex="-1" role="dialog" aria-labelledby="comfirmModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="comfirmModalLabel1">
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="comfirmBody1">
+          <div id="for_delete" hidden=""></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel1" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        <button type="button" id="comfirm1" class="btn btn-primary" >Ок</button>
       </div>
     </div>
   </div>

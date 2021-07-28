@@ -182,8 +182,9 @@
   $('body').on("click", ".add", function () {
     $('#first_name').val('');
     $('#last_name').val('');
-    $('#role').val();
-    $('#status').val();
+    $('#role').val('user');
+    $('#status').val('');
+    $('#status').prop('checked', false);
     $('#id_user').val('');
     $('#exampleModalLabel').text('Add user');
     $('#add_edit').text('Add');
@@ -249,45 +250,45 @@
         checkedid.push($(this).val());
     });
     if (checkedid.length == 0){
-      $('#comfirmModalLabel').text('Ошибка');
-      $('#comfirmBody').text('Выберите, пожалуйста, одного или несколько пользователей!');
-      $('#comfirm').hide();
-      $('#cancel').text('Ок');
+      $('#comfirmModalLabel1').text('Ошибка');
+      $('#comfirmBody1').text('Выберите, пожалуйста, одного или несколько пользователей!');
+      $('#comfirm1').hide();
+      $('#cancel1').text('Ок');
     } else if(sel == '0'){
-      $('#comfirmModalLabel').text('Ошибка');
-      $('#comfirmBody').text('Пожалуйста, выберите действие, которое хотите совершить!');
-      $('#comfirm').hide();
-      $('#cancel').text('Ок');
+      $('#comfirmModalLabel1').text('Ошибка');
+      $('#comfirmBody1').text('Пожалуйста, выберите действие, которое хотите совершить!');
+      $('#comfirm1').hide();
+      $('#cancel1').text('Ок');
     } else if(sel == 'set-act' && checkedid.length == 1){
-      $('#comfirmModalLabel').text('Сделать статус пользователя активным');
-      $('#comfirmBody').text('Вы уверены, что хотите АКТИВИРОВАТЬ пользователя?');
-      $('#comfirm').show();
-      $('#cancel').text('Отмена');
+      $('#comfirmModalLabel1').text('Сделать статус пользователя активным');
+      $('#comfirmBody1').text('Вы уверены, что хотите АКТИВИРОВАТЬ пользователя?');
+      $('#comfirm1').show();
+      $('#cancel1').text('Отмена');
     } else if(sel == 'set-act' && checkedid.length > 1){
-      $('#comfirmModalLabel').text('Сделать статус пользователей активными');
-      $('#comfirmBody').text('Вы уверены, что хотите АКТИВИРОВАТЬ пользователей?');
-      $('#comfirm').show();
-      $('#cancel').text('Отмена');
+      $('#comfirmModalLabel1').text('Сделать статус пользователей активными');
+      $('#comfirmBody1').text('Вы уверены, что хотите АКТИВИРОВАТЬ пользователей?');
+      $('#comfirm1').show();
+      $('#cancel1').text('Отмена');
     }  else if(sel == 'set-no-act' && checkedid.length == 1){
-      $('#comfirmModalLabel').text('Сделать статус пользователя НЕ активным');
-      $('#comfirmBody').text('Вы уверены, что хотите ДЕАКТИВИРОВАТЬ пользователя?');
-      $('#comfirm').show();
-      $('#cancel').text('Отмена');
+      $('#comfirmModalLabel1').text('Сделать статус пользователя НЕ активным');
+      $('#comfirmBody1').text('Вы уверены, что хотите ДЕАКТИВИРОВАТЬ пользователя?');
+      $('#comfirm1').show();
+      $('#cancel1').text('Отмена');
     } else if(sel == 'set-no-act' && checkedid.length > 1){
-      $('#comfirmModalLabel').text('Сделать статус пользователей НЕ активными');
-      $('#comfirmBody').text('Вы уверены, что хотите ДЕАКТИВИРОВАТЬ пользователей?');
-      $('#comfirm').show();
-      $('#cancel').text('Отмена');
+      $('#comfirmModalLabel1').text('Сделать статус пользователей НЕ активными');
+      $('#comfirmBody1').text('Вы уверены, что хотите ДЕАКТИВИРОВАТЬ пользователей?');
+      $('#comfirm1').show();
+      $('#cancel1').text('Отмена');
     } else if(sel == 'del-grp' && checkedid.length == 1){
-      $('#comfirmModalLabel').text('Удаление пользователя');
-      $('#comfirmBody').text('Вы уверены, что хотите УДАЛИТЬ пользователя?');
-      $('#comfirm').show();
-      $('#cancel').text('Отмена');
+      $('#comfirmModalLabel1').text('Удаление пользователя');
+      $('#comfirmBody1').text('Вы уверены, что хотите УДАЛИТЬ пользователя?');
+      $('#comfirm1').show();
+      $('#cancel1').text('Отмена');
     } else if(sel == 'del-grp' && checkedid.length > 1){
-      $('#comfirmModalLabel').text('Удаление пользователей');
-      $('#comfirmBody').text('Вы уверены, что хотите УДАЛИТЬ пользователей?');
-      $('#comfirm').show();
-      $('#cancel').text('Отмена');
+      $('#comfirmModalLabel1').text('Удаление пользователей');
+      $('#comfirmBody1').text('Вы уверены, что хотите УДАЛИТЬ пользователей?');
+      $('#comfirm1').show();
+      $('#cancel1').text('Отмена');
     }
   });
 
@@ -330,7 +331,7 @@
 
   // Групповые действия с пользователями
   $(document).ready(function () {
-  $('#comfirm').click(function (){
+  $('#comfirm1').click(function (){
     var id = $('.status').data('id');
     var sel = $('#group1').val();
     var checkedid = [];
@@ -357,7 +358,7 @@
               $('#act'+checkedid[i]).css('color', 'black');
             }
           }
-          $('#comfirmModal').modal('hide'); 
+          $('#comfirmModal1').modal('hide'); 
         }
       })
   });
