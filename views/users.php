@@ -41,7 +41,7 @@
                               <option value="set-no-act">Set not active</option>
                               <option value="del-grp">Delete</option>
                             </select>
-                            <button type="button" id="ok1" name="ok1" class="btn btn-primary ok1" data-toggle="modal" data-target="#comfirmModal">OK</button>
+                            <button type="button" id="ok1" name="ok1" class="btn btn-primary ok1" data-toggle="modal" data-target="#comfirmModal1">OK</button>
                         </div>
                     </div>
                 </div>
